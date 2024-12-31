@@ -25,7 +25,4 @@ return true;
 
 }
 
-
-
-// console.log(checkPrime(1));
 console.log(countEl([1,2,3,7,6])); 

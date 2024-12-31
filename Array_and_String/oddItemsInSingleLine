@@ -2,7 +2,7 @@ function odditems(arr){
  let bag=""; 
  for(let i=0; i<arr.length; i++){
     if(arr[i]%2===1){
-    console.log(i); 
+    // console.log(i); 
         bag+=arr[i]; 
 
     }

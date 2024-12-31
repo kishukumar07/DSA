@@ -1,1 +1,1 @@
-isprime(arr[i+1])
+niket
