@@ -16,13 +16,29 @@ function convertCaseofStr(str){  //finall Time complexity => O(n*k)
         resultStr+=uppercaseAlphabets[j]; 
     }
    }
-
     }
     return resultStr; 
 }
-
-
 console.log(convertCaseofStr("nIkEt"));  //output : NiKeT 
 
 
-//method2 .using ascii value 
+/*method2 .using ascii value   => O(n)
+
+How to know ascii value of a character
+
+const character = 'A';
+const asciiValue = character.charCodeAt(0); // Get ASCII value of the first character
+console.log(asciiValue); // Output: 65
+
+how to know character from ascii value
+const asciiCode = 65; 
+const character = asciiToChar(asciiCode); 
+console.log(character); // Output: "A"
+
+
+A (uppercase): 65
+a (lowercase): 97
+Z (uppercase): 90
+z (lowercase): 122 */
+
+
