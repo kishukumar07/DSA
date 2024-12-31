@@ -39,6 +39,8 @@ console.log(character); // Output: "A"
 A (uppercase): 65
 a (lowercase): 97
 Z (uppercase): 90
-z (lowercase): 122 */
+z (lowercase): 122 
 
 
+
+*/
