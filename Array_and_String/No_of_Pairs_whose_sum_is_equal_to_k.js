@@ -9,7 +9,7 @@ function pairs(arr, k) {
 
     //using two pointers we can solve it in O(n) if array is already sorted  and if array is not shorted we have to sort it that lead to use of arr.sort() method && it will make O(nlogn)+O(n)   : O(nlogn)will becomes O(1) if already sorted
 
-   arr.sort((a, b) => a - b); //O(nlogn)    
+   arr.sort((a, b) => a - b); //O(nlogn)     
 
     while (l < r) {  //O(n)
         if (arr[l] + arr[r] === k) {
