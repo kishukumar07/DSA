@@ -1,5 +1,6 @@
 //Print the maximum occuring element of an array  
 
+
 //Aproach1.Brute force =>O(n**2)
 //Aproach2.Has_Map => ()
     // * Object  =>  O(n) 
@@ -25,13 +26,17 @@ let max=-Infinity;
 let maxOccEl;
 for(let key in obj){ //O(n)
     
-if (obj[key]>max){
+if (obj[key]>max ){
+
     max=obj[key]; 
     maxOccEl =key; 
 }
 }
-
 return maxOccEl; 
+
 }
 
-console.log(maxOccEl([2,2,3,4])); 
+
+console.log(maxOccEl([2,3,4])); 
+
+ 
