@@ -2,7 +2,6 @@
 You are given an integer array nums and an integer k. Find the maximum subarray sum of all the subarrays of nums that meet the following conditions:
 Return the maximum subarray sum of all the subarrays that meet the conditions. If no subarray meets the conditions, return 0. */
 
-
 var maximumSubarraySum = function(nums, k){
     let maxsum =0; 
              for(let i=0; i<=k-1 ; i++){
@@ -17,6 +16,5 @@ var maximumSubarraySum = function(nums, k){
 
     return maxsum; 
     };
-
 
 console.log(maximumSubarraySum([1,5,4,2,9,9,9],3)); 

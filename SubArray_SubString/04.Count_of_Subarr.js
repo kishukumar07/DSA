@@ -25,4 +25,5 @@ console.log(fun([1, 2, 3, 4])); //output: 4
 
 
 
-//Aproach2:  as previous Question 
+//Aproach2: Optimised approach ??
+
