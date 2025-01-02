@@ -29,6 +29,6 @@ sum+=arr[i];
  
 return(index); 
 }
-
+ 
 
 console.log(findIndex([14,8,2,14,7,4])); 
