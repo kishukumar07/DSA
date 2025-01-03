@@ -8,7 +8,7 @@
 
 
 
-function ntraversal(arr,n){
+function ntraversal(arr,n){ //O(n)
 // for Line1
 let line1=""; 
 for(let i=n-1; i>=0; i--){
