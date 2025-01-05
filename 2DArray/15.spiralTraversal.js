@@ -1,5 +1,5 @@
-// Leetcode 54. Spiral Matrix : Given an m x n matrix, return all elements of the matrix in spiral order.
-
+// . Spiral Traversal : Given an m x n matrix, 
+// traverse spirally top to bottom ->>bottom to right bottom ->> right bottom to top right   -->> top right to top left and so on ...
 
 
 function spiral(arr,m,n){
