@@ -30,7 +30,7 @@ const input = `
 
 
 
-// Approach : the que can be solved using more opimal approach but for practice we can use bubble sort 
+// Approach : the que can be solved using more opimal approach but for practice we can use bubble sort  for sorting 
 
 leetcode(input); 
 
