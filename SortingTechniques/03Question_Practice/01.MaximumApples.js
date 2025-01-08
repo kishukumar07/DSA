@@ -28,6 +28,10 @@ const input = `
 3 10 4 4
 `;
 
+
+
+// Approach : the que can be solved using more opimal approach but for practice we can use bubble sort 
+
 leetcode(input); 
 
 function leetcode(input){
