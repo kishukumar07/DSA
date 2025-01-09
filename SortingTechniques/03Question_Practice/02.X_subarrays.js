@@ -10,6 +10,7 @@ let input1 = `
 4 3 2
 1 3 2 5 
 `
+
 let input2 = `
 2
 4 3 2
