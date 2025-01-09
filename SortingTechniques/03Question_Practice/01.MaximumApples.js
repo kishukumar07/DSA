@@ -54,8 +54,6 @@ for(let j=0; j<=n-1-i; j++){
        arr[j+1]=temp ; 
        isswaped=true; 
     }
-
-
 }   
 if(isswaped==false){
 break; 
