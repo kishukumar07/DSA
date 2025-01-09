@@ -17,3 +17,25 @@ sampleInput          sampleOutput
 // Solution :   
 
 
+let ans=tomandnick(300);
+console.log(ans); 
+
+function  tomandnick(num){
+    let c1=0; 
+    let c2=0; 
+while(num%10===0){
+    c1++ ;
+    num=num/10; 
+}
+while(num%2===0){
+    c2++; 
+    num=num/2; 
+}
+
+if(c1>=c2 && num==1){
+  return true; 
+}
+return false ;
+
+}
+
