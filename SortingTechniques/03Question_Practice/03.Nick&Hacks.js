@@ -36,6 +36,5 @@ if(c1>=c2 && num==1){
   return true; 
 }
 return false ;
-
 }
 
