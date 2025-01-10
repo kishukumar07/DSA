@@ -32,8 +32,6 @@ function mindistgoal(arr, k) {
     let mindist = +Infinity;
 
     while (j <= n - 1) {
-
-
         windowSum += arr[j];
         while (windowSum >= k) {
             if (j - i + 1 < mindist) {
@@ -42,9 +40,7 @@ function mindistgoal(arr, k) {
             windowSum -= arr[i];
             i++;
         }
-
         j++;
-
     }
 
 
@@ -54,7 +50,6 @@ function mindistgoal(arr, k) {
     else {
         console.log(mindist);
     }
-
 }
 
 
