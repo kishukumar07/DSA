@@ -1,4 +1,4 @@
-/* leetcode1196.
+/* leetcode que1196.
 description: you have some apples in  basket  that can carry up to W units of weight .
 Given integer array weight of size N where weight[i] is the weight of the ith apple , return the maximum number of apples you can put in the basket.  
 
@@ -28,7 +28,7 @@ const input = `
 3 10 4 4
 `;
 
-
+ 
 
 // Approach : the que can be solved using more opimal approach but for practice we can use bubble sort  for sorting 
 

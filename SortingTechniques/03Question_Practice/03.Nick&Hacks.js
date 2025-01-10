@@ -12,10 +12,7 @@ sampleInput          sampleOutput
 200                      Yes  
 */
 
-
-
 // Solution :   
-
 
 let ans=tomandnick(300);
 console.log(ans); 
