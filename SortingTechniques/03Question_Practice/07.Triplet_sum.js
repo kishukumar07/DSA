@@ -4,7 +4,6 @@ if there exist any such triplet in the array output 1 else 0.
 Note : a,b,c all need to be different indices 
 ie.. you can not use any element twice ... */
 
-
 // approach1. brute force  
 // approach 2. optimal approach two ptr 
 

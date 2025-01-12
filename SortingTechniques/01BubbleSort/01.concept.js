@@ -5,6 +5,7 @@ let arr = [3, 5, 6, 1, 5, 9, 2, 0]; //O{N-squire} --> max to max n squire swap o
 // let arr=[0,1,2,3,4];  //O{N} -> no swap occurs
 let n = arr.length;
 console.log(bubbleSort(arr, n));
+
 function bubbleSort(arr, n) {
     for (let i = 0; i <= n - 2; i++) {
         let isSwaped = false;
@@ -22,6 +23,7 @@ function bubbleSort(arr, n) {
         }
 
     }
-
     return arr;
 }
+
+

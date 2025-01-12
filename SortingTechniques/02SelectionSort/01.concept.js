@@ -30,7 +30,9 @@ function selectionSort(arr, n) {
 
 
 
-/* Q. StableSortingAlgorithm :-relative ordering of element should not be changed 
+
+
+/* Q. StableSortingAlgorithm:-relative ordering of element should not be changed 
 bubbleSort ->> yes ,it a stable sorting algo. bcs every time we are comparing adjecent element..No
         Eg. inp=[4,'2A',3,'2B',5,'2C']
          phase1=['2A',3,'2B',4,'2C',5]  
@@ -48,3 +50,5 @@ SelectionSort ->> No, it is unstable sorting algo. bcs of its working Procedure
   
 
 */ 
+
+

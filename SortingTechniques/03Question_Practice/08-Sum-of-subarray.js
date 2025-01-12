@@ -11,8 +11,6 @@ Sampleinputs                         SampleOutputs
 4 4  --->L & R                            8
 1 4 --->L & R                             11
 3 3--->L & R                              1
-
-
 */
 
 // Approach1 : this question can be solved using cummulative frequency and  Approach2  with single ptr  also
@@ -24,15 +22,13 @@ printsumofwindow(arr,n,3,3);
 function printsumofwindow(arr,n,L,R){
     let sum=0; 
     for(let i=L-1; i<=R-1; i++){
-        sum+=arr[i]; 
+    sum+=arr[i]; 
     }
 console.log(sum); 
 } 
 
 
 //Aproach1:  using cumlative frequency of array or Prefix sum
-
-
-
+//hint: s cumm[R]-cumm[L-1] = ans 
 
 
