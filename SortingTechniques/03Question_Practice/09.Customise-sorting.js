@@ -47,6 +47,6 @@ if(isSwaped===0){
 
 }
 
-console.log(arr.join("")); 
+console.log(arr); 
 
 }
