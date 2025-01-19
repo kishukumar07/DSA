@@ -29,17 +29,17 @@ var isValid = function (s) {
                 stack.pop();
             }
             else {
-                return "false"
+                return false
             }
         }
     }
     //final condition check 
     if (peek() === undefined) {  //mean stack is empty when peek() is undefined 
         // console.log(1); 
-        return "true"
+        return true
     } else {
         // console.log(1); 
-        return "false"
+        return true
     }
 
 
