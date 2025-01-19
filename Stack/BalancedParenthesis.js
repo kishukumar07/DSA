@@ -65,12 +65,8 @@ var isValid = function (s) {
     }
 
 
-
-
     //TC=>O(n)
     //SC =>O(n)
-
-
 };
 
 

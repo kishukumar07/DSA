@@ -13,8 +13,8 @@
 
 //approach1. using bruteforce :  A simple solution is to run two nested loops. We pick an outer element one by one. For every picked element, we traverse toward the left of it and find the closest (value-wise) greater element. The time complexity of this solution is O(n*n)
 
-// approach2. using stack implementation : Tc =>O(n) && SC=>O{n}
-
+// approach2. using stack implementation : Tc =>O(n) && SC=>O{n} 
+ 
 
 let arr = [16, 10, 8, 3, 16, 9, 7, 12, 12, 2]
 let result = new Array(arr.length).fill(0);
