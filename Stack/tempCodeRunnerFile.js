@@ -1,0 +1,1 @@
+aaabccddd ->>abccddd ->abddd ->abd

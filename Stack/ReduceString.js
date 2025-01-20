@@ -20,3 +20,22 @@ for (let i = 0; i <= str.length - 1; i++) {
 
 
 //Approach2 using stack Adt: => const str="aaabccddd";  =>>
+
+
+
+let st=new Array(); 
+
+let i=0; 
+while(i<=str.length-1){
+
+  if(str[i]===st[st.length-1]){
+   st.pop(); 
+  }
+else{
+  st.push(str[i]); 
+}
+i++
+
+}
+
+console.log("with second method \t =>> "+ st.join("")); 
