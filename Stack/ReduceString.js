@@ -38,4 +38,4 @@ i++
 
 }
 
-console.log("with second method \t =>> "+ st.join("")); 
+ st.length===0? console.log("emptstring"): console.log(st.join("")); 
