@@ -4,10 +4,6 @@ let arr = [73, 74, 75, 71, 69, 72, 76, 73];
 //goal : => reslut array : a[i] = no of days to get a warm temp . if no such day then a[i]=0
 //Approach we have to record a result array where each result[i]= index of that warmer day from right then we substract with the orignal index(ie..we have to substract the current index with the warmer day index)
 
-
-
-
-
 let result = new Array(arr.length); //this will contain the distance of the warmer day 
 let finalresult = new Array(arr.length);  //this will contain the distance of warmer day - el distance (el - index)
 
@@ -41,7 +37,6 @@ for (let i = 0; i <= arr.length - 1; i++) {
     } else {
         finalresult[i] = result[i];  //it will intilize 0 bc result[i] cant be -ve ; 
     }
-
 }
 
 
