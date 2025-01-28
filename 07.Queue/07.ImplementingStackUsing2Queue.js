@@ -42,17 +42,10 @@ return v;
 }
 
 
-
 }
 
 
-
 let st = new stack(); // { q2: [], q1: [6,5,4,3]  }  //st= [3,4,5,6] For Dry run
-
-
-
-
-
 
 
 //lets make a dry run
