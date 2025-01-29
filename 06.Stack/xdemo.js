@@ -15,6 +15,7 @@ st.push(87)
 st.push(0)
 st.push(3)
 st.pop()
-st.pop()
+st.pop()//commetn
+
 
 console.log(peek()); 
