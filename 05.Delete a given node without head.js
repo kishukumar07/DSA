@@ -24,4 +24,7 @@ function deletenode(node) {
     return true; // Indicate success
 }
 
+
+
+
 console.log(head);  //checking purpose 
