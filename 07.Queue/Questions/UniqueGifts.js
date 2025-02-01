@@ -5,7 +5,7 @@ let str="abcabc";
 
 function unique(str){
 
-var dict={}; 
+    var dict={}; 
 var queue=[]; 
 let i=0; 
 
