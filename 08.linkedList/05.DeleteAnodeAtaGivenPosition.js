@@ -6,8 +6,6 @@ class Node{
         this.next=null; 
     }
 }
-
-
 function deletenodeatPosition(head, position){ 
 
 if(position==1){
@@ -28,12 +26,7 @@ return head;
 }  
 
 
-
-
-
-//inviking node
-
-
+//invoking node
 let n1=new Node(1); 
 let n2=new Node(2); 
 let n3=new Node(3); //creating nodes
@@ -46,8 +39,6 @@ n3.next=n4;
 n4.next=n5;
 n5.next=n6; 
  let head =n1; 
-
-
 
  head=deletenodeatPosition(head, 6);
  console.log(head); 
