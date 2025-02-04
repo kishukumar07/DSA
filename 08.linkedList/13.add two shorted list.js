@@ -26,11 +26,17 @@ sum+=carry;
 carry=Math.floor(sum/10);
 let digit=sum%10;
 let newnode =new Node(digit); 
-
 domeynode.next=newnode; 
-
 domeynode=domeynode.next; 
 }
+if(carry){
+    let newnode =new Node(carry); 
+    domeynode.next=newnode; 
+    domeynode=domeynode.next;   
+}
+
+
+
 return head.next; 
 }
 
