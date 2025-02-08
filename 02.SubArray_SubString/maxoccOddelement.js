@@ -13,4 +13,4 @@ function longestRepeatedOdd(N, array) {
     }
     console.log(maxc)
 }
-longestRepeatedOdd(10,[2,1,1,2,1,1,1,1,1,0]); 
+longestRepeatedOdd(10,[2,1,1,2,1,1,1,1,1,0]);  //5 times oddno 1repeated so ==> output:5
