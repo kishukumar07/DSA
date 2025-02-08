@@ -5,7 +5,6 @@ console.log("output of 2nd loop below ")
 printArray2(arr.length - 1, arr)//should print in reverse order like ... lastIndexel to firstIndex_el  
 
 
-
 function printArray1(index, arr) {
     if (index > arr.length - 1) {//also written as index === arr.length 
         return;
