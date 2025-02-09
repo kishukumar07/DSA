@@ -13,3 +13,4 @@ return bag;
 
 let x=decimaltobinary(5); 
 console.log(x); 
+console.log(x); 
