@@ -1,7 +1,4 @@
 // Number of ways Problem: Sandya is running up a staircase with N steps , and can hop(jump) either 1step, 2step, 3step at a time . You have to count , how many possible ways Sandhya can run up to the stairs. 
-
-
-
 // solution :Recurssion 
 choice=(input)=>{
     if(input===0)return 1; 
