@@ -5,9 +5,6 @@ function runProgram(input) {
        return n*fact(n-1); 
    }
    console.log(fact(input));
-   
+
   }
-
-
-
 runProgram(5); 
