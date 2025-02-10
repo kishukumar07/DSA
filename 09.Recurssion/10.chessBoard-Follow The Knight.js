@@ -10,7 +10,6 @@ function runProgram(input) {
             board[i][j] = 1;
             return;
         }
-
         // 8 possible moves of a Knight
         logic(i - 2, j - 1, n - 1, board);
         logic(i - 2, j + 1, n - 1, board);
@@ -39,4 +38,5 @@ function runProgram(input) {
 }
 
 // Test Case
+runProgram("3 3 1");
 runProgram("3 3 2");
