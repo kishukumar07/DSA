@@ -48,4 +48,33 @@ return sum + sumofdigits(Math.floor(el/10) ) ; // return  reminder + ellastdigit
 }; 
 
 
-//approach2... 
+//approach2...   hasmap 
+var maximumSum = function(nums) {
+    let hash={}
+    let max=-Infinity; 
+    for(let i=0; i<nums.length; i++){      // O(n*k)
+        let currEl=nums[i]; 
+        let sum = sumofdigits(currEl);  //O(k)
+                 if(hash[`${sum}`]!=undefined ){             
+                     max=Math.max(max,  hash[`${sum}`] + currEl )
+                     hash[`${sum}`] =Math.max(hash[`${sum}`],currEl )
+                 }else {
+                    hash[`${sum}`]  = currEl;  
+                 }
+    }           
+    if(max==-Infinity){
+        return -1; 
+    }
+    return max; 
+    
+    
+    //alternative required functions with recursion method ...
+    function sumofdigits(el ,sum=0){      //O(k)
+    if(el==0) return 0; //base condition
+    sum+=el%10
+    return sum + sumofdigits(Math.floor(el/10) ) ; // return  reminder + ellastdigitrec.cal  
+    }
+    
+    
+    };
+    
