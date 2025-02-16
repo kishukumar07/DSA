@@ -1,3 +1,5 @@
+
+// leanthy approach 
 var punishmentNumber = function (n) {
     return(punishment(n, 1, 0)); // This should return the punishment number
 
@@ -26,3 +28,8 @@ var punishmentNumber = function (n) {
     }
 
 };
+
+
+
+
+//optimised One [https://excalidraw.com/#json=7_FzfIG2p3prkw1aRq2h-,zE1P8xYXSmz_WZLdD08S7w ]
