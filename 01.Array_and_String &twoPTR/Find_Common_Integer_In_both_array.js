@@ -1,11 +1,12 @@
 function findCommonEL(arr1, arr2){
-    //method1.BruteForceApproach =>> O(n**2)
+//method1.BruteForceApproach =>> O(n**2)
 //taking with two ptr =>>O(n) or taking hasmap =>> O{n}
 
 //if we using two ptr we have to sort the array first if not sorted=>O(n) for bestCase ifarray is already sorted nd O(nlogn) if array is not sorted 
 
-arr1.sort((a, b) => a - b); 
-arr2.sort((a, b) => a - b); 
+arr1.sort((a, b) => a - b);  
+arr2.sort((a, b) => a - b); //bubble sort O(nsquire)...
+
 let el; 
 let i=0 ,j=0;  
 while(i<arr1.length && j<arr2.length){  //here we using and operator bcs array is sorted 
@@ -17,7 +18,7 @@ while(i<arr1.length && j<arr2.length){  //here we using and operator bcs array i
 else if(arr1[i]<arr2[j]){
     i++; 
 }
-else if(arr1[i]>arr2[j]){
+else if(arr1[j]<arr2[i]){
     j++; 
 }
 }

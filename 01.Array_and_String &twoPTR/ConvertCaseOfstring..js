@@ -53,8 +53,7 @@ function conversion(str){
 
     for(let i=0; i<n; i++){
       
-
-          let asciiValue= str[i].charCodeAt(0)
+         let asciiValue= str[i].charCodeAt(0)
         //let asciiValue= str.charCodeAt(i)   //both_are_correct....
                 
          if(asciiValue >=97){ //mean it's smallercase
@@ -62,11 +61,9 @@ function conversion(str){
            }else{
                  asciiValue+=32; 
            }
-           let character= asciiToChar(asciiValue); 
+           let character= (asciiValue+" "); 
            bag+= character; 
-
-       }
-
+         }
        console.log(bag); 
 
 }
