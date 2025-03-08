@@ -40,7 +40,33 @@ A (uppercase): 65
 a (lowercase): 97
 Z (uppercase): 90
 z (lowercase): 122 
-
-
-
 */
+
+
+//given a string containing both uper and lower case letters u need to convert both uppercase to lowercase and lower case to upperCase
+
+conversion("dsfD")
+function conversion(str){
+
+    let n=str.length; 
+    let bag=""; 
+
+    for(let i=0; i<n; i++){
+      
+
+          let asciiValue= str[i].charCodeAt(0)
+        //let asciiValue= str.charCodeAt(i)   //both_are_correct....
+                
+         if(asciiValue >=97){ //mean it's smallercase
+                 asciiValue-=32; 
+           }else{
+                 asciiValue+=32; 
+           }
+           let character= asciiToChar(asciiValue); 
+           bag+= character; 
+
+       }
+
+       console.log(bag); 
+
+}
