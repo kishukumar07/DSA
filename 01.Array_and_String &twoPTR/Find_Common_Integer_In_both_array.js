@@ -5,7 +5,7 @@ function findCommonEL(arr1, arr2){
 //if we using two ptr we have to sort the array first if not sorted=>O(n) for bestCase ifarray is already sorted nd O(nlogn) if array is not sorted 
 
 arr1.sort((a, b) => a - b);  
-arr2.sort((a, b) => a - b); //bubble sort O(nsquire)...
+arr2.sort((a, b) => a - b); //if used --->bubble sort O(nsquire)...   
 
 let el; 
 let i=0 ,j=0;  

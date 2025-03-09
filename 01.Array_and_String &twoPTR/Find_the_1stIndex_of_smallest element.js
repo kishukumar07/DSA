@@ -33,12 +33,8 @@ console.log(findIndex([14, 8, 2, 14, 7, 4]));  //4
 
 
 
-
-
-
-
-
-//if question will say witout substracting then ? app2 prefixsum + sliding window
+//if question will say witout substracting then ? app2 prefixsum + sliding window   ===>>best approach 1 without using division operator
+//but this method is usefull in que like product of array except self 
 console.log(finding([14, 8, 2, 14, 7, 4]));
 
 function finding(arr, n = arr.length) {
@@ -74,7 +70,6 @@ minimumel =arr[i];
 }
 
 }
-
 
     return minimumel;
 }

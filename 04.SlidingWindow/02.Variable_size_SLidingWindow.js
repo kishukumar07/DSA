@@ -21,7 +21,6 @@
 //     }
 //     return false;
 // }
-
 // console.log(fun([3,4,20,3,10,5],6,33)); 
 
 

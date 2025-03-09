@@ -1,6 +1,5 @@
 //given a string containing both uper and lower case letters u need to convert both uppercase to lowercase and lower case to upperCase
 
-
 //brute force Approach 
 function convertCaseofStr(str){  //finall Time complexity => O(n*k)
     let uppercaseAlphabets="QWERTYUIOPASDFGHJKLZXCVBNM"; 
@@ -32,7 +31,7 @@ console.log(asciiValue); // Output: 65
 
 how to know character from ascii value
 const asciiCode = 65; 
-const character = asciiToChar(asciiCode); 
+const character = String.fromCharCode(asciiValue); 
 console.log(character); // Output: "A"
 
 
@@ -61,7 +60,7 @@ function conversion(str){
            }else{
                  asciiValue+=32; 
            }
-           let character= (asciiValue+" "); 
+           let character= String.fromCharCode(asciiValue); 
            bag+= character; 
          }
        console.log(bag); 
