@@ -30,3 +30,29 @@ function runProgram(input) {       //call stack size reached ....err partial acc
 }
 
 
+
+
+//the better way not to get stackoverflow
+function runProgram(input) {
+    const lines = input.trim().split("\n");
+    let t = parseInt(lines[0], 10);
+    processCases(lines, 1, t);
+}
+
+function processCases(lines, index, t) {
+    if (t === 0) return; // Base case
+
+    let numStr = lines[index].trim();  
+    console.log(superdigit(numStr)); 
+
+    processCases(lines, index + 1, t - 1);
+}
+
+function superdigit(numStr) {
+    if (numStr.length === 1) return parseInt(numStr, 10); // Base case
+
+    // Compute sum of digits using string processing
+    let sum = numStr.split("").reduce((acc, digit) => acc + parseInt(digit, 10), 0);
+
+    return superdigit(sum.toString()); // Recursive call with reduced number
+}
