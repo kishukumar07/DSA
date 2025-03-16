@@ -56,9 +56,22 @@ function superdigit(numStr) {
 
     return superdigit(sum.toString()); // Recursive call with reduced number
 }
-// Fix: Use String Processing Instead of Recursion for Summing Digits
+
+// Fix: Use String Processing Insteda of Recursion for Summing Digits
 // Instead of performing recursion on large numbers directly, we can:
 
 // Convert the number to a string.
 // Use .split("").reduce() to sum its digits efficiently.
 // Call superdigit() on the summed result.
+// Why This Works Better?
+// ✅ Avoids stack overflow
+
+// Instead of recursive calls for summing digits, we use .split("").reduce(), reducing the call stack depth.
+// ✅ Handles very large numbers efficiently
+
+// Works on numbers as strings instead of converting them to Number, preventing loss of precision.
+// ✅ Correct output even for large inputs
+
+// Since we reduce the size of the number at each step, recursion depth remains manageable.
+
+
