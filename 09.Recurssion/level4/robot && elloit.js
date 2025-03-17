@@ -3,10 +3,10 @@ function runProgram(input) {
 
     let t = Number(lines[0]); // Number of test cases
     let j = 1;
-
     while (t > 0) {
         let n = Number(lines[j++]); // Length of string
         let str = lines[j++]; // The actual string
+   
 
         console.log(elliot(str, 0, n - 1)); // Correct function call
 
@@ -27,3 +27,7 @@ function elliot(str, leftIndex, rightIndex) {
 
     return bag1 + bag2 + bag3;
 }
+
+
+
+

@@ -36,3 +36,7 @@ function againChoice(n, k, arr) {
 //     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:16:16)
 //     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:16:16)
 //     at againCh...
+
+const input= `37 2
+9 10`
+runProgram(input); 

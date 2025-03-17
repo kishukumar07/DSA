@@ -7,8 +7,9 @@ function runProgram(input) {
    let n =lines[0]; 
    let r =lines[1]; 
   
-  
+      
     let result = findGp(n,r);
+
     console.log(result.toFixed(4)); 
   
     
@@ -24,5 +25,4 @@ function runProgram(input) {
        return value + findGp(n-1,r);
   
   }
-  
   
