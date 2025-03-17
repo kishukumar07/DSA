@@ -48,7 +48,7 @@ function processCases(lines, index, t) {
     processCases(lines, index + 1, t - 1);
 }
 
-function superdigit(numStr) {
+function superdigit(numStr) {  
     if (numStr.length === 1) return parseInt(numStr, 10); // Base case
 
     // Compute sum of digits using string processing
