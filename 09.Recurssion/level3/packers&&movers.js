@@ -21,3 +21,18 @@ function againChoice(n, k, arr) {
 
 //leading to call stack overflow 
 
+// Input
+// 26 4
+// 9 6 7 10
+// Expected Output
+// 15
+// Output
+// /judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:10
+// function againChoice(n, k, arr) {
+//             
+// RangeError: Maximum call stack size exceeded
+//     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:10:21)
+//     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:16:16)
+//     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:16:16)
+//     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:16:16)
+//     at againCh...
