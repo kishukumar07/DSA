@@ -1,4 +1,4 @@
-function eTopowerX(x, n) {
+function eTopowerX(x, n) {         
     if (n === 0) return 1; // Base case: first term is 1
     return (power(x , n) / fact(n)) + eTopowerX(x, n - 1); // Recursive sum
 }

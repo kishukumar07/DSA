@@ -39,4 +39,4 @@ function againChoice(n, k, arr) {
 
 const input= `37 2
 9 10`
-runProgram(input); 
+runProgram(input);

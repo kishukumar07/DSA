@@ -1,23 +1,17 @@
-function runProgram(input) {
-    // Write code here
-    
-   let lines=input.split(" ").map(Number); 
-  //  console.log(lines);
-   
-    console.log(crazy(lines[0],lines[1])); 
-  
-    function crazy(a,b){
-        if(b===0) return 1; 
-        if(b===1){
-            return a; 
-        }
-       ans = crazy(a,Math.floor(b/2)); 
-        if(a%2===0){
-            return ans * ans ; 
-        }else{
-            return ans * ans *a ; 
-        }
+function power(a, b) {
+    if (b === 0) return 1; // Base case: a^0 = 1
+    //   if(b===1)return a;  //useless make dryrun 
+
+    let halfPower = power(a, Math.floor(b / 2)); // Recursive call for a^(b/2)
+
+    if (b % 2 === 0) {
+      
+        return halfPower * halfPower; // If even, return (a^(b/2))^2
+    } else {
+       
+        return a * halfPower * halfPower; // If odd, return a * (a^(b/2))^2
     }
-    
-    
-  }
+}
+
+
+console.log(power(2,2)); 
