@@ -13,5 +13,4 @@ function power(a, b) {
     }
 }
 
-
 console.log(power(2,2)); 
