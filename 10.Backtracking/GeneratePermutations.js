@@ -29,38 +29,41 @@ function runProgram(input) {
   }
 
 
+//to get ouput in sorted order  we use sorting  
 
-
-  //this way u can get ans in structured and sorted manner 
-
- function runProgram(input) {
+function runProgram(input) {
   let lines = input.trim().split("\n");
   let n = +lines[0];
   let arr = lines[1].split(" ").map(Number);
 
-  arr.sort((a, b) => a - b); // Ensure the array starts in sorted order
+
   let result = [];
-  possibleSequence(arr, n, 0, result);
-  console.log(result.join("\n"));
+  generatePermutations(arr, n, 0, result);
+  
+  console.log(result.sort().join("\n"));   //sorting the result. 
 }
 
 function swap(arr, i, j) {
-  [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap using destructuring
+  [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap elements
 }
 
-function possibleSequence(arr, n, k, result) {
-  if (k === n) {
+function generatePermutations(arr, n, index, result) {
+  if (index === n) {
     result.push(arr.join(" ")); // Store permutation
     return;
   }
 
-  for (let i = k; i < n; i++) {
-    swap(arr, i, k); // Swap elements
-    possibleSequence(arr, n, k + 1, result);
-    swap(arr, i, k); // Swap back (backtracking)
+  let used = {}; // Object to track duplicate elements at the current level
+
+  for (let i = index; i < n; i++) {
+    if (used[arr[i]]) continue; // Skip duplicate values
+    used[arr[i]] = true;
+
+    swap(arr, i, index); // Swap
+    generatePermutations(arr, n, index + 1, result);
+    swap(arr, i, index); // Backtrack
   }
 }
-
 function testCases() {
   console.log("🔹 Test Case 1:");
   runProgram(`3\n1 2 3`);
@@ -75,3 +78,35 @@ function testCases() {
 }
 
 testCases();
+
+
+// 🔹 Test Case 1:
+// 1 2 3
+// 1 3 2
+// 2 1 3
+// 2 3 1
+// 3 1 2
+// 3 2 1
+
+// 🔹 Test Case 2:
+// 1 1 2
+// 1 2 1
+// 1 1 2
+// 1 2 1
+// 2 1 1
+// 2 1 1
+
+// 🔹 Test Case 3:
+// 1 2 3 4
+// 1 2 4 3
+// 1 3 2 4
+// 1 3 4 2
+// ...
+// 4 3 2 1
+
+// 🔹 Test Case 4:
+// 5
+
+// 🔹 Test Case 5:
+// 8 9
+// 9 8
