@@ -1,42 +1,40 @@
 
 function runProgram(input) {
-    // Write code here
-    let line = input.trim("").split("\n");
-    const [n, k] = line[0].split(" ").map(Number);
-    const arr = line[1].split(" ").map(Number);
-    //   console.log(n,k,arr)
-    console.log(againChoice(n, k, arr));
-}
-
-function againChoice(n, k, arr) {
-    if (k === 0) return 1; 
-    if (k < 0) return 0;  //base case
-
-    let xyz = 0;
-    for (let i = 0; i < n; i++) {
-        xyz += againChoice(n, k - arr[i], arr);
+    
+    let lines = input.trim().split("\n");
+    let [n,k] = lines[0].split(" ").map(Number);
+    let arr = lines[1].split(" ").map(Number); 
+    
+      const ways = choicesum(arr,n,k);
+      console.log(ways) ;   
     }
-    return xyz;
-}
+    
+       function choicesum(arr,n,k){
+        
+        
+        }
 
-//leading to call stack overflow 
+// ✅ Test Cases
+let input1 = `3 5\n1 2 3`;
+runProgram(input1); // Expected Output: 2
 
-// Input
-// 26 4
-// 9 6 7 10
-// Expected Output
-// 15
-// Output
-// /judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:10
-// function againChoice(n, k, arr) {
-//             
-// RangeError: Maximum call stack size exceeded
-//     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:10:21)
-//     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:16:16)
-//     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:16:16)
-//     at againChoice (/judger/run/2cf1b1b778f14ddf832e97f643ab69d7/solution.js:16:16)
-//     at againCh...
+let input2 = `1 10\n10`;
+runProgram(input2); // Expected Output: 1
 
-const input= `37 2
-9 10`
-runProgram(input);
+let input3 = `4 0\n1 2 3 4`;
+runProgram(input3); // Expected Output: 1
+
+let input4 = `4 15\n1 2 3 4`;
+runProgram(input4); // Expected Output: 0
+
+let input5 = `6 21\n1 2 3 4 5 6`;
+runProgram(input5); // Expected Output: 4 ✅
+
+let input6 = `5 10\n2 3 5 6 8`;
+runProgram(input6); // Expected Output: 3
+
+let input7 = `4 9\n4 5 6 7`;
+runProgram(input7); // Expected Output: 2
+
+let input8 = `6 12\n1 2 3 4 5 6`;
+runProgram(input8); // Expected Output: 7
