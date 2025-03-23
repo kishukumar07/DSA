@@ -1,40 +1,29 @@
 function runProgram(input) {
-    // Handling input
     let lines = input.trim().split("\n"); 
-    let [n, arr] = [+lines[0], lines[1].split(" ").map(Number)]; 
+    let n = +lines[0];
+    let arr = lines[1].split(" ").map(Number);
     
-    let result = gensubset(arr,n);
+    let result= countOddSumSubsets(arr, 0); 
     
- result = result.filter(el => condition(el));
-
-    
-    console.log(result.length); 
+    console.log(result.length);
 }
 
-function gensubset(arr,n,k=0,subset=[],result=[]){
-    
-    if(k===n){
-        //logic/base condn -handeling like what if k ===n     
-        return result; 
+
+function countOddSumSubsets(arr, index = 0, sequence = [], result = []) {
+    if (index === arr.length) {
+        const sum = sequence.reduce((acc, num) => acc + num, 0);
+        if (sum % 2 !== 0) {  // Check if sum is odd
+            result.push([...sequence]);
+        }
+        return;
     }
-    
-    
-    
-    for(let i=k; i<n; i++){
-        //create logic of pushing arr[i] in subset 
-        subset.push(arr[i]); 
-        //logic of pusing subset in res
-        result.push([...subset]); 
-        //call
-        gensubset(arr,n,i+1,subset,result)
-        //distroy - logic of pop arr[i] in subset 
-        subset.pop(); 
-    }
-    
-    return result; 
+
+    // Include current element
+    countOddSumSubsets(arr, index + 1, [...sequence, arr[index]], result);
+
+    // Exclude current element
+    countOddSumSubsets(arr, index + 1, sequence, result);
+
+    return result;
 }
 
-function condition(subset) {
-    let sum = subset.reduce((acc, curr) => acc + curr, 0);
-    return sum % 2 === 1; // Check if the sum is odd
-}
