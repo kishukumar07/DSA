@@ -8,9 +8,6 @@ cheshboard.push(new Array(4).fill(0))
 
 nqueen(cheshboard, row = 0);
 
-
-
-
 function nqueen(cheshboard, row) {
 
     if (row === cheshboard.length) {
@@ -50,9 +47,7 @@ for(let i =row , j=colm; i>=0 && j>=0; i--, j--  ){
 for(let i =row , j=colm; i>=0 && j<=board[0].length; i--, j++  ){
         if(board[i][j]===1) return false ;  
     }
-        
     return true; 
-
 }
 
 
