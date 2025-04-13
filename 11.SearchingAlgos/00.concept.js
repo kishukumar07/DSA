@@ -30,7 +30,7 @@ function binarySearch(arr, key, low = 0, high = arr.length) {
         return -1
     }; //base case when they cross
 
-    let mid = Math.floor(low + ((high - low) / 2));  //main case 
+    let mid = Math.floor(low + ((high - low) / 2));  //main case    -floor value is must 
 
     if (arr[mid] == key) {
         return mid;
