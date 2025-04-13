@@ -9,7 +9,7 @@
                      -> -will make check if (i squire === num )  return i ; 
                      ->    =>O(n)
 
- bbl search    ->  will mentain a arr =[1,2,3,4.....num-1 ]  -> O(n) space and time 
+ binary search    ->  will mentain a arr =[1,2,3,4.....num-1 ]  -> O(n) space and time 
 
                      -> for the array we'll check weather the middleEl in the space 
                            -> squireofmiddleEl === num  -> we got that ele
