@@ -278,32 +278,92 @@ console.log(result2); // Output: 7
 
 
 
-
-BINARY SEARCH ALGORITHM :-  "DISCARDING ONEPART AND KEEPING ANOTHER HALF IS THE ONLY THING "
-                            -THIS IS THE ONLY THING WE ARE GOING TO USE A LOT OF TIMES .
+ 
+BINARY SEARCH ALGORITHM :- is all about .... "DISCARDING ONEPART AND KEEPING ANOTHER HALF IS THE ONLY THING "
+                            -THIS IS THE ONLY THING WE ARE GOING TO USE A LOT OF TIMES -how to discard this is technique that we have to modify only each and every time.
                             
 
 
 
-
-
-HAVE TO COMPLETE THIS PART ...THEN NEXT PART ....
-
+                            --------------------------------------------------------------------------
                                   LOWER BOUND :-  INDEX OF FIRST ELEMENT GREATER THAN EQUALS KEY     
-  
-                                  UPPER BOUND :-  INDEX OF FIRST ELEMENT GREATER THAN KEY 
+                            --------------------------------------------------------------------------
+let's understand this by an eg ...
+                                    in finding the key's index problem with binary search ...
+                                       eg.  arr=[2,5,5,7,9,15]          and      key =5 
+                                                 0 1 2 3 4 5 <- index
+                                         the normal binary search algo returns the first mid as an index of key
+                                           i.e resultIndex =  2nd index  
+But what if i want Index of First Element greater than equals to that key . {lowerbound ~   >=  key  :remember }
+
+
+ => dont you think we have to modify of BinarySearchAlgorithm ..
+
+                                               so if this is the array => [2,5,5,5,5,7,9,15]   //sorted 
+                                                                           0 1 2 3 4 5 6 7
+                           => #technique
+                                 we'll store /modify result's value again and again ....whenever midel equals or greater than that key .....
+                                 and if this happens we'll  move towards left bcs it requires first element index which is greater or equals ...
+                                 i.e =>     result = mid ;  
+                                            high = mid-1; 
+                                 
+                             else condition {  //the middle element is lesser than the key ... in this case bcs array is sorted we have to move for right part
+                                                         ie. low =mid+1;    
+                                                }
+                                   this conditions will iterate only till the low < high 
+
+
+                           =># algorithm 
+                                       step_1 .     declaration and initialization ~ result =-1 , low =0 , high =arr.length-1;  
+                         	       step_2 .     making a while loop the base condition should be low > high 
+
+                                       step_3.      finding middle Index  =? low +high-low/2 
+                                   
+                                       step_4.      checking the middleEl if is >= key  -----> reinitialization result with  mid  
+                                     step_4_{ii}.   moving to the left part i.e. high =mid -1
+                                      
+                                     step_5.         else -> low =mid+1 //moving to the right part in sorted array Bs
+                                          
+                                     step5. we'll return result after the loop . 
+                          
+                          =>#conclusion : this will return the -1 (first initialized value -denoting that there is no such lowerbound present)
+                                          otherwise this will return the lower bound  ✓✓
+
+ 
+                          => #sourceCode => 
+ 
+
+ 
 
 
 
+                             -------------------------------------------------------------------
+                                  UPPER BOUND :-  INDEX OF FIRST ELEMENT GREATER THAN KEY
+                             -------------------------------------------------------------------
+                          similar to lower bound ... just have to modify the techniques ...here  
+                                                         
+ 						
+									#technique  => we will have to find the only greater element ...at this time we only reinitilize the result as mid 
+                                                                                                                          and will move to the left side bcs we need first > el than key 
+                                                                         
+                                                                                         else // the midel will be the lesser or equals to key . in this case we need to move for right part 												in the sorted arr in order to find the greater elemnet  
+                               										 and - after this the whole thing will be same as lower bound technique.  
 
 
+                                                                        #algorithm  =>   
+                                                                                step1. Initilize result =-1 , low =0 , high =arr.lenght-1; 
+                                                                                step2. Declaring while loop with condition (low < high )
+                                                                                step3. Finding midd el 
+                                                                                step4. Checking if midel is > key   ->  result = mid  
+                                                                             step4.ii. high =mid-1 ; //moving left part bcs we need first greater el in sorted arr  
+                                                                            step5. else condn // midel is less or equals key we have to move to to right part inorder to get the greater el 
+                                                                                     i.e .. low =mid+1 
+                                                                       
+                                                                              step6. finally we have to return the result /arr[result ]have {if not found -edgecase result will be -1 }
+ 
 
+                                                                        #sourceCode  => 
 
-
-
-
-
-
-
+ 
 
  
