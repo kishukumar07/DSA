@@ -2,7 +2,8 @@ function lowerbound(arr, key, low = 0, high = arr.length - 1, result = -1) {
 
     if (low > high) return result;
 
-    let mid = low + high - low / 2;
+  
+    let mid =Math.floor( low + (high - low) / 2);
 
 
     if (arr[mid] >key) {

@@ -397,4 +397,25 @@ return lowerbound(arr, key , mid+1, high  , result)
   => O(logn) timecomplexity   - > for both recursive and iterative codes  
   => O(1) space complexity 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
