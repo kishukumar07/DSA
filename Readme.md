@@ -14,8 +14,9 @@ Each folder in this repository is dedicated to a specific **DSA topic**, contain
 ├── 06.Stack                        # Stack-based problems
 ├── 07.Queue                        # Queue-based problems
 ├── 08.linkedList                   # Linked List problems
-├── 09.Recursion                    # Recursion problems
+├── 09.Recursion                     # Recursion problems   
 ├── 10.Backtracking                  # Backtracking problems
+├── 11.Searching Algorithms          # Linear Vs Binary Search Algorithms ~ problems 
 ├── LeetcodePOTDSolutions            # Leetcode Problem of the Day (POTD) solutions
 ├── JS ASCII Value Methods.pdf       # ASCII character conversion solutions
 └── Readme.md                        # Documentation
