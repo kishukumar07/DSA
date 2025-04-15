@@ -333,8 +333,21 @@ But what if i want Index of First Element greater than equals to that key . {low
                           => #sourceCode => 
  
 
- 
+function lowerbound(arr, key , low=0, high =arr.length-1 ,result = -1){
 
+if(low>high) return result; 
+
+let mid  = low + high -low /2; 
+
+
+if(arr[mid]>=key ) {
+return lowerbound(arr , key ,low , mid-1 , mid)
+}else {
+return lowerbound(arr, key , mid+1, high  , result ) 
+}
+
+
+}
 
 
                              -------------------------------------------------------------------
@@ -350,7 +363,7 @@ But what if i want Index of First Element greater than equals to that key . {low
                                										 and - after this the whole thing will be same as lower bound technique.  
 
 
-                                                                        #algorithm  =>   
+                                                                      #algorithm  =>   
                                                                                 step1. Initilize result =-1 , low =0 , high =arr.lenght-1; 
                                                                                 step2. Declaring while loop with condition (low < high )
                                                                                 step3. Finding midd el 
@@ -363,6 +376,19 @@ But what if i want Index of First Element greater than equals to that key . {low
  
 
                                                                         #sourceCode  => 
+function lowerbound(arr, key , low=0, high =arr.length-1 ,result = -1){
+
+if(low>high) return result; 
+
+let mid  = low + high -low /2; 
+
+if(arr[mid]>key) {
+return lowerbound(arr , key ,low , mid-1 , mid )  
+} else {
+return lowerbound(arr, key , mid+1, high  , result) 
+}
+
+}
 
  
 
