@@ -392,4 +392,9 @@ return lowerbound(arr, key , mid+1, high  , result)
 
  
 
+
+ //both finding lower and upperbound has 
+  => O(logn) timecomplexity   - > for both recursive and iterative codes  
+  => O(1) space complexity 
+
  
