@@ -62,9 +62,9 @@ function lastOccurence(arr, key, low = 0, high = arr.length - 1, lastindex = -1)
     }
 }
 
-let lastindex = lastOccurence([1, 2, 2, 2, 4, 5, 6], 2)
-let resultx =   lastOccurence([1, 2, 2, 2, 4, 5, 6], 12)
-let resulty =   lastOccurence([1, 2, 2, 2, 4, 5, 6], 3)
+let lastindex =   lastOccurence([1, 2, 2, 2, 4, 5, 6], 2)
+let resultx   =   lastOccurence([1, 2, 2, 2, 4, 5, 6], 12)
+let resulty   =   lastOccurence([1, 2, 2, 2, 4, 5, 6], 3)
 console.log(lastindex, resultx, resulty) // first index of the key 
 
 
@@ -76,16 +76,14 @@ console.log(lastindex, resultx, resulty) // first index of the key
 
 
 
-function frequency(arr,key){
+function frequency(arr,key){ 
 
     if(lastOccurence(arr,key)){
-        return lastOccurence(arr,key) - firstIndexOfKey(arr,key) 
-
+        return lastOccurence(arr,key) - firstIndexOfKey(arr,key) ; 
     }
 return -1 ; 
-
 }
 
-console.log(frequency([1,2,2,2,34] ,2))
+console.log(frequency([1,2,2,2,34] ,2))   // log-n
 
-console.log(frequency([1,2,2,2,34] ,43))
+console.log(frequency([1,2,2,2,34] ,43)) // log-n
