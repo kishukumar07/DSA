@@ -7,12 +7,43 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
+      margin: 20px;
+      padding: 0;
       background: #fff;
       color: #333;
+      font-size: 14px;
+      line-height: 1.4;
     }
-    h1, h2, h3 {
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
       color: #1a1a1a;
+    }
+    h2 {
+      font-size: 18px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+    h3 {
+      font-size: 16px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color: #1a1a1a;
+    }
+    h4 {
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    p {
+      margin: 5px 0;
     }
     a {
       color: #d6336c;
@@ -21,136 +52,159 @@
     a:hover {
       text-decoration: underline;
     }
-    section {
-      margin-bottom: 40px;
-    }
     ul {
       padding-left: 20px;
+      margin: 5px 0;
     }
-    .skills-section h4 {
-      margin-top: 20px;
+    li {
+      margin-bottom: 3px;
+    }
+    .contact-info {
+      margin-bottom: 10px;
     }
     .contact-links a {
       margin-right: 10px;
     }
+    .section {
+      margin-bottom: 15px;
+    }
+    .skills-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .skills-column {
+      flex: 1;
+      min-width: 250px;
+    }
+    .project {
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 <body>
+  <div class="resume-container">
+    <h1>Kishu Kumar</h1>
+    <div class="contact-info">
+      <p>Mob: 6207760272 | Email: <a href="mailto:kishukumars082@gmail.com">kishukumars082@gmail.com</a></p>
+      <p class="contact-links">
+        <a href="https://www.linkedin.com/in/kishu-kumar-sahu/">LinkedIn</a>
+        <a href="https://x.com/Kishukumar07">Twitter</a>
+        <a href="https://github.com/kishukumar07">GitHub</a>
+      </p>
+    </div>
 
-  <h1>Kishu Kumar</h1>
-  <p>Mob: 6207760272 | Email: <a href="mailto:kishukumars082@gmail.com">kishukumars082@gmail.com</a></p>
-  <p class="contact-links">
-    <a href="https://www.linkedin.com/in/kishu-kumar-sahu/">LinkedIn</a>
-    <a href="https://x.com/Kishukumar07">Twitter</a>
-    <a href="https://github.com/kishukumar07">GitHub</a>
-  </p>
+    <div class="section">
+      <h2>SUMMARY</h2>
+      <p>Self-driven and skilled Full-Stack Developer with hands-on experience in the MERN stack (MongoDB + (cloud)Atlas, Express.js, CJS, Node.js). Strong in Backend Engineering, with expertise in building robust APIs, implementing authentication, SMTP integration, RBAC, WebSocket/Socket.io communication, Redis caching, and scalable system design. Passionate about building clean, efficient, and production-ready applications. Highly adaptable, quick to learn, and committed to solving real-world problems through code.</p>
+    </div>
 
-  <section>
-    <h2>SUMMARY</h2>
-    <p>Self-driven and skilled Full-Stack Developer with hands-on experience in the MERN stack (MongoDB + (cloud)Atlas, Express.js, CJS, Node.js). Strong in Backend Engineering, with expertise in building robust APIs, implementing authentication, SMTP integration, RBAC, WebSocket/Socket.io communication, Redis caching, and scalable system design. Passionate about building clean, efficient, and production-ready applications. Highly adaptable, quick to learn, and committed to solving real-world problems through code.</p>
-  </section>
+    <div class="section">
+      <h2>SKILLS</h2>
+      <div class="skills-columns">
+        <div class="skills-column">
+          <h4>🚀 Frontend Development</h4>
+          <ul>
+            <li>HTML5, CSS3, JavaScript (ES6+)</li>
+            <li>Responsive Design, DOM Manipulation</li>
+            <li>Advanced JS Concepts: Closures, Hoisting, Promises, Async/Await, Event Loop</li>
+            <li>Modular Codebase Structuring & UI Design Principles</li>
+          </ul>
 
-  <section class="skills-section">
-    <h2>SKILLS</h2>
-    <h4>🚀 Frontend Development</h4>
-    <ul>
-      <li>HTML5, CSS3, JavaScript (ES6+)</li>
-      <li>Responsive Design, DOM Manipulation</li>
-      <li>Advanced JS Concepts: Closures, Hoisting, Promises, Async/Await, Event Loop</li>
-      <li>Modular Codebase Structuring & UI Design Principles</li>
-    </ul>
+          <h4>🛠 Backend Development</h4>
+          <ul>
+            <li>Node.js, Express.js</li>
+            <li>RESTful APIs, Express Middleware, MVC Architecture</li>
+            <li>Authentication: JWT (Access/Refresh Tokens), OAuth, RBAC</li>
+            <li>Real-Time Communication: WebSocket, Socket.io</li>
+          </ul>
+        </div>
 
-    <h4>🛠️ Backend Development</h4>
-    <ul>
-      <li>Node.js, Express.js</li>
-      <li>RESTful APIs, Express Middleware, MVC Architecture</li>
-      <li>Authentication: JWT (Access/Refresh Tokens), OAuth, RBAC</li>
-      <li>Real-Time Communication: WebSocket, Socket.io</li>
-      <li>Email Services: SMTP, Nodemailer Integration</li>
-      <li>Input Validation using Regular Expressions</li>
-      <li>API Documentation with Swagger</li>
-    </ul>
+        <div class="skills-column">
+          <h4>🗄 Database & DevOps</h4>
+          <ul>
+            <li>MongoDB, Mongoose ODM</li>
+            <li>MongoDB Atlas, Advanced Queries & Aggregation Framework</li>
+            <li>Redis Caching & Data Optimization</li>
+            <li>Basic AWS (EC2, S3) Concepts</li>
+            <li>Monitoring & Logging (Node.js ecosystem)</li>
+          </ul>
 
-    <h4>🗄️ Database & DevOps</h4>
-    <ul>
-      <li>MongoDB, Mongoose ODM</li>
-      <li>MongoDB Atlas, Advanced Queries & Aggregation Framework</li>
-      <li>Redis Caching & Data Optimization</li>
-      <li>Basic AWS (EC2, S3) Concepts</li>
-      <li>Monitoring & Logging (Node.js ecosystem)</li>
-    </ul>
+          <h4>🧱 Full-Stack Development</h4>
+          <ul>
+            <li>End-to-End MERN CRUD Projects</li>
+            <li>Authentication Systems with JWT and Role-Based Access Control</li>
+            <li>Clean Code Practices, Scalable Project Architecture</li>
+          </ul>
+        </div>
 
-    <h4>🧱 Full-Stack Development</h4>
-    <ul>
-      <li>End-to-End MERN CRUD Projects</li>
-      <li>Authentication Systems with JWT and Role-Based Access Control</li>
-      <li>Clean Code Practices, Scalable Project Architecture</li>
-      <li>Deployment & Hosting (Render, Vercel, Netlify, Railway, MongoDB Atlas)</li>
-    </ul>
+        <div class="skills-column">
+          <h4>🧰 Tools & Technologies</h4>
+          <ul>
+            <li>Git & GitHub, Postman, Swagger UI</li>
+            <li>VS Code, Chrome DevTools</li>
+            <li>MongoDB Compass, RedisInsight</li>
+            <li>Terminal, npm, nodemon</li>
+          </ul>
 
-    <h4>🧰 Tools & Technologies</h4>
-    <ul>
-      <li>Git & GitHub, Postman, Swagger UI</li>
-      <li>VS Code, Chrome DevTools</li>
-      <li>MongoDB Compass, RedisInsight</li>
-      <li>Terminal, npm, nodemon</li>
-    </ul>
+          <h4>💡 Additional Skills</h4>
+          <ul>
+            <li>System Design Fundamentals</li>
+            <li>Debugging & RCA (Root Cause Analysis)</li>
+            <li>Strong Problem-Solving & Learning Mindset</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <h4>💡 Additional Skills</h4>
-    <ul>
-      <li>System Design Fundamentals</li>
-      <li>Debugging & RCA (Root Cause Analysis)</li>
-      <li>Strong Problem-Solving & Learning Mindset</li>
-    </ul>
-  </section>
+    <div class="section">
+      <h2>EXPERIENCE</h2>
+      <div class="project">
+        <h3>💬 Real-Time Chat Application</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/kishukumar07/chatapp-/tree/main/Server">chatapp</a></p>
+        <ul>
+          <li>Implemented WebSocket-based bi-directional messaging between users using Socket.io.</li>
+          <li>Integrated JWT authentication and structured the code using the MVC pattern.</li>
+          <li>Used MongoDB Atlas for real-time user and message data storage.</li>
+        </ul>
+      </div>
 
-  <section>
-    <h2>Experience</h2>
-    <h3>💬 Real-Time Chat Application</h3>
-    <p><strong>GitHub:</strong> <a href="https://github.com/kishukumar07/chatapp-/tree/main/Server">chatapp</a></p>
-    <ul>
-      <li>Implemented WebSocket-based bi-directional messaging between users using Socket.io.</li>
-      <li>Integrated JWT authentication and structured the code using the MVC pattern.</li>
-      <li>Used MongoDB Atlas for real-time user and message data storage.</li>
-      <li>Focused on scalable architecture and optimized real-time performance for seamless communication.</li>
-    </ul>
+      <div class="project">
+        <h3>📝 Blog Client Backend (MERN Stack)</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/kishukumar07/Blog_Client_Backend">Blog_Client_Backend</a></p>
+        <ul>
+          <li>Engineered the backend for a feature-rich blog application with post creation, editing, and authentication.</li>
+          <li>Built with Express.js, Node.js, MongoDB, and Mongoose for seamless database integration.</li>
+          <li>Implemented JWT-based authentication, refresh token strategy, and RBAC.</li>
+        </ul>
+      </div>
 
-    <h3>📝 Blog Client Backend (MERN Stack)</h3>
-    <p><strong>GitHub:</strong> <a href="https://github.com/kishukumar07/Blog_Client_Backend">Blog_Client_Backend</a></p>
-    <ul>
-      <li>Engineered the backend for a feature-rich blog application, enabling post creation, editing, authentication, and user interaction.</li>
-      <li>Built with Express.js, Node.js, MongoDB, and Mongoose for seamless database integration.</li>
-      <li>Implemented JWT-based authentication, refresh token strategy, and RBAC (Role-Based Access Control).</li>
-      <li>Secured routes, handled error responses, and ensured token blacklisting for better security.</li>
-      <li>Utilized Swagger for API documentation and collaboration efficiency.</li>
-    </ul>
+      <div class="project">
+        <h3>🗒 Notes App – Backend API</h3>
+        <p><strong>GitHub:</strong> <a href="https://github.com/kishukumar07/Note_client">Note_client_-_Backend</a></p>
+        <ul>
+          <li>Built a secure and modular backend API for a full-stack notes app using Node.js, Express, and MongoDB.</li>
+          <li>Integrated bcrypt for password hashing and JWT for secure route protection.</li>
+          <li>Applied middleware-based route authorization, ensuring only note owners can modify content.</li>
+        </ul>
+      </div>
+    </div>
 
-    <h3>🗒️ Notes App – Backend API</h3>
-    <p><strong>GitHub:</strong> <a href="https://github.com/kishukumar07/Note_client">Note_client_-_Backend</a></p>
-    <ul>
-      <li>Built a secure and modular backend API for a full-stack notes app using Node.js, Express, and MongoDB.</li>
-      <li>Integrated bcrypt for password hashing and JWT for secure route protection.</li>
-      <li>Supported full CRUD operations restricted to authenticated users.</li>
-      <li>Applied middleware-based route authorization, ensuring only note owners can modify or delete content.</li>
-      <li>Emphasized clean architecture with separate route, controller, model, and middleware layers.</li>
-    </ul>
-  </section>
+    <div class="section">
+      <h2>EDUCATION</h2>
+      <ul>
+        <li>Intermediate of Science (2021–2023), Marwari College, Ranchi</li>
+        <li>Bachelor in Computer Application (2023–2026), Marwari College, Ranchi</li>
+      </ul>
+    </div>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>Intermediate of Science (2021–2023), Marwari College, Ranchi</li>
-      <li>Bachelor in Computer Application (2023–2026), Marwari College, Ranchi</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Key Achievements</h2>
-    <ul>
-      <li>Debugged critical issues, improving stability by 25%.</li>
-      <li>Solved 500+ DSA questions that helped me write logic-based code.</li>
-    </ul>
-  </section>
-
+    <div class="section">
+      <h2>KEY ACHIEVEMENTS</h2>
+      <ul>
+        <li>Debugged critical issues, improving stability by 25%.</li>
+        <li>Solved 500+ DSA questions that helped me write logic-based code.</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
