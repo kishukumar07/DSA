@@ -510,16 +510,42 @@ but what is floor ??
  let's try to understand with eg.... 
                                      Arr =[1,4,5,6,6,6,6,6,6,6,8,10,12]
                              _______________________________
-                             | key  |  el<=key   | floor?  |
-                             |------|------------|---------|
-                             |  5   |  1,4,5     |   5     |
-                             |  9   |  1,4,5,6,8 |   8     |
-                             |  0   |no such el  |   -1    |
+                             | key | el<=key    | floor? |
+                             | --- | ---------- | ------ |
+                             | 5   | 1,4,5      | 5      |
+                             | 9   | 1,4,5,6,8  | 8      |
+                             | 0   | no such el | -1     |
                              -------------------------------
+   *** the key may or maynot present in the array but the Element floor is always there .       
+   *** if the key is present in the array the key will be floor itself .  (similar to finding key in arr problem)
+   *** but if the key is not there the value which is closest to the key will be the ans. 
+                                                
+
+       1. A[mid]===key => return A[mid] as floor 
+       2. A[mid] < key => ans = mid   
+                       => low = mid+1  //move for the right part in order to find greater element.  
+       3. A[mid] > high =mid -1   //moving to left space in order to get lesser element. 
+       
+       
 
 
 
+       function findFloor(arr , key , low=0 , high=arr.lenght-1 , ans =0   ){
+
+   if(low>high) return ans; 
 
 
-//present sir 
+let mid =   Math.floor( low + ( (high -low) / 2) )
+
+          if( arr[mid] === key )   return key ; 
+
+else if(arr[mid]<key){
+   return      findFloor(arr , key , mid+1 , high , arr[mid]  )
+} 
+else {
+     return     findFloor(arr , key , low , mid-1 , ans  )
+}
+
+       }
+
 
