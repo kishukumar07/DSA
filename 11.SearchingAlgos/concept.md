@@ -506,7 +506,7 @@ console.log(frequency([1,2,2,2,34] ,43)) // log-n
        => Problem2. Find the floor of a given key in an array <=
              ------------------------------------------
             
-but what is floor ??
+but what is floor ?? = > { el <= key }  
  let's try to understand with eg.... 
                                      Arr =[1,4,5,6,6,6,6,6,6,6,8,10,12]
                              _______________________________
@@ -521,6 +521,9 @@ but what is floor ??
    *** but if the key is not there the value which is closest to the key will be the ans. 
                                                 
 
+
+//technique ...
+
        1. A[mid]===key => return A[mid] as floor 
        2. A[mid] < key => ans = mid   
                        => low = mid+1  //move for the right part in order to find greater element.  
@@ -530,22 +533,73 @@ but what is floor ??
 
 
 
-       function findFloor(arr , key , low=0 , high=arr.lenght-1 , ans =0   ){
 
-   if(low>high) return ans; 
+function findFloor(arr, key, low = 0, high = arr.length - 1, ans = -1) {
 
+    if (low > high) return ans;
 
-let mid =   Math.floor( low + ( (high -low) / 2) )
+    let mid = Math.floor(low + ((high - low) / 2));
 
-          if( arr[mid] === key )   return key ; 
+    if (arr[mid] == key) {
+        return arr[mid]
+    }
+    else if (arr[mid] < key) {
+        return findFloor(arr, key, mid + 1, high, arr[mid])
+    }
+    else {
+        return findFloor(arr, key, low, mid - 1, ans)
+    }
 
-else if(arr[mid]<key){
-   return      findFloor(arr , key , mid+1 , high , arr[mid]  )
-} 
-else {
-     return     findFloor(arr , key , low , mid-1 , ans  )
 }
 
-       }
+
+let result  = findFloor([1, 4, 5, 6, 6, 6, 6, 6, 8, 10, 12], 0)//-1
+let result2 = findFloor([1, 4, 5, 6, 6, 6, 6, 6, 8, 10, 12], 9) //8
+let result3 = findFloor([1, 4, 5, 6, 6, 6, 6, 6, 8, 10, 12], 5) //5
+console.log(result ,result2 ,result3);
+
+
+
+
+          ------------------------------------------
+       => Problem3. Find the ceil of a given key in an array <=
+             ------------------------------------------
+but what is ceil ?? = > { el >= key }  
+ let's try to understand with eg.... 
+                                     Arr =[1,4,5,6,6,6,6,6,6,6,8,10,12]
+                             _______________________________
+                             | key | el<=key    | floor? |
+                             | --- | ---------- | ------ |
+                             | 6   | 6,8,10,12  | 6      |
+                             | 3   | 1,4,5,6,8  | 4      |
+                             | 15  | no such el | -1     |
+                             -------------------------------
+
+
+ *** the key may or maynot present in the array but the Element celi is always there .       
+   *** if the key is present in the array the key will be floor itself .  (similar to finding key in arr problem)
+   *** but if the key is not there the value which is closest to the key will be the ans. 
+                                                
+
+       1. A[mid]===key => return A[mid] as ceil 
+       2. A[mid] < key    => low = mid+1  //move for the right part in order to find greater    
+                                            element.  
+       3. A[mid] > key => ans  = mid  
+                       => high = mid -1   //moving to left space in order to get lesser element. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

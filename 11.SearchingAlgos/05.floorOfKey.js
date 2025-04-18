@@ -22,3 +22,5 @@ let result  = findFloor([1, 4, 5, 6, 6, 6, 6, 6, 8, 10, 12], 0)//-1
 let result2 = findFloor([1, 4, 5, 6, 6, 6, 6, 6, 8, 10, 12], 9) //8
 let result3 = findFloor([1, 4, 5, 6, 6, 6, 6, 6, 8, 10, 12], 5) //5
 console.log(result ,result2 ,result3);
+
+
