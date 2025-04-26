@@ -4,13 +4,12 @@ you need to cut  the wood till W = 20(given weight w)
 arr = [5, 9, 15, 20, 24, 28, 32, 37, 40]
 arr2 = [20, 15, 10, 17].sort((a, b) => a - b);   //array should be sorted first===>O{nlogN}
 /*
-#technique : - we'll find the middle tree in sorted trees .. then we'll start cutting tree from the height of the middle tree to n - 1th tree(the extra height will be cut down) we keep store the wood we get     
+#technique : - we'll find the middle tree in sorted trees .. then we'll start cutting tree from the height of the middle tree to high th tree(the extra height will be cut down) we keep store the wood we get     
   we'll check if we got exact weight of wood we required 
 if its less than  we'll  move to the left space in order to find midd again and start cutting extra heights of the other trees from mid tree+1st tree  
 -if the wtgot is > required weight we'll move to the right space in order to get less weight ...
 
 //--okay we need a binary search algorithm . 
-
 
 
 
@@ -82,19 +81,6 @@ console.log(result2);
 
 
 // present sir 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
