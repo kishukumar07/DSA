@@ -19,4 +19,7 @@ function minInSandR(arr, low, high) {
 }
 
 let result = minInSandR(arr,0,arr.length-1)
-console.log(result)
+console.log(arr[result])  //fetching the el of resultant index. 
+
+
+
