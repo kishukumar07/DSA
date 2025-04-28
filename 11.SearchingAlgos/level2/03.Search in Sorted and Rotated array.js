@@ -8,19 +8,22 @@
 
 let arr = [5, 6, 7, 8, 9, 1, 2, 3, 4];
 
-function keyIndexInSandR(arr,key, low = 0, high = arr.length - 1) {
-    if (low >= high) return low;
+function keyIndexInSandR(arr, key, low = 0, high = arr.length - 1) {
+    
 
-    let mid = Math.floor(low + (high - low) / 2);
-
-    if (key == arr[mid]) {
-        return mid;
-    }
-    else if (key > arr[mid]) {
-        return keyIndexInSandR(arr,key, mid + 1, high);
-    } else {
-        return keyIndexInSandR(arr,key, low, mid );
-    }
 }
 
-console.log(keyIndexInSandR(arr,1))
+console.log(keyIndexInSandR(arr, 1))
+
+
+
+
+
+
+
+
+
+
+
+
+
