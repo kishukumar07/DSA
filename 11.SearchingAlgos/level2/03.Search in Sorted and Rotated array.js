@@ -25,13 +25,30 @@ function minel(arr, low = 0, high = arr.length - 1) {
 
 
 function keyIndexInSandR(arr, key, minElIndex) {
+    // 0- >min- >n-1 
+    // 0-> min
+    // min+1 -> n-1
+    if (key >= arr[minElIndex] && key <= arr[arr.length - 1]) {
+        binarySearch(arr, key, minElIndex, arr.length - 1);
+    }
+    else {
+        binarySearch(arr, key, 0, minElIndex + 1);
+    }
+}
+
+function binarySearch(arr, key, low, high) {
+    //goal we have to search the index of the key 
+    if (low > high) return -1;
+
+    let mid = Math.floor(low + (high - low) / 2);
+
+    if (arr[mid] === key) return mid;
 
 
 
 
 
 }
-
 
 
 
