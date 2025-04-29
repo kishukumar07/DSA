@@ -20,44 +20,48 @@ function minel(arr, low = 0, high = arr.length - 1) {
 }
 
 
-// console.log(minElIndex); 
-
 
 
 function keyIndexInSandR(arr, key, minElIndex) {
     // 0- >min- >n-1 
     // 0-> min
     // min+1 -> n-1
-    if (key > arr[minElIndex] && key < arr[arr.length - 1]) {
+    if (key >= arr[minElIndex] && key <= arr[arr.length - 1]) {
         return binarySearch(arr, key, minElIndex, arr.length - 1);
     }
     else {
-        return binarySearch(arr, key, 0, minElIndex + 1);
+        return binarySearch(arr, key, 0, minElIndex - 1);
     }
 }
 
 function binarySearch(arr, key, low, high) {
     //goal we have to search the index of the key 
+    // console.log(low, high)
     if (low > high) return -1;
 
     let mid = Math.floor(low + (high - low) / 2);
 
-    if (arr[mid] == key) return mid;
-
+    if (arr[mid] == key) {
+        return mid;
+    }
     else if (key > arr[mid]) {
-        return binarySearch(arr, key, low, mid - 1)
+        return binarySearch(arr, key, mid + 1, high)
     }
     else {
-        return binarySearch(arr, key, mid + 1, high)
+        return binarySearch(arr, key, low, mid - 1)
     }
 
 }
 
 
 
-
 let minElIndex = minel(arr);
-console.log(keyIndexInSandR(arr, 5, minElIndex))
+
+// console.log(minElIndex);
+
+console.log(keyIndexInSandR(arr, 4, minElIndex));
+console.log(keyIndexInSandR(arr, 3, minElIndex));
+console.log(keyIndexInSandR(arr, 7, minElIndex));
 
 
 
