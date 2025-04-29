@@ -30,15 +30,20 @@ console.log(min);  //this is O(logn) T.c
 
 
 
-//we have to check weater the both part is sorted or not  
+//we have to check weater the both part 0 ->Min-1 && Min ->n-1    is sorted or not  
 //=>we'll say yes if it is ...
 //we'll say no if isn't it ...
+function sortCheck(arr, low, high) {
+    for (let i = low; i < high; i++) {
+        if (arr[i] > arr[i + 1]) return false;
+    }
+    return true;
 
 
+}
 
 
-
-
-
-
-
+if (sortCheck(arr, 0, min - 1) && sortCheck(arr, min, arr.length - 1)) { console.log("yees"); }
+else {
+    console.log("No");
+}
