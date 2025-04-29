@@ -4,5 +4,41 @@
 
 
 
-let arr=[5,6,7,8,9,1,2,3,4]; 
+let arr = [5, 6, 7, 8, 9, 1, 2, 3, 4];
 //finding the min el index in S&R array...
+
+
+
+function minElIndexinSandR(arr, low = 0, high = arr.length - 1) {
+    if (low >= high) return low;
+
+    let mid = Math.floor(low + (high - low) / 2);
+
+    if (arr[mid] > arr[high]) {
+        //right part is sorted  here is the min el 
+        return minElIndexinSandR(arr, mid + 1, high);
+    }
+    else {
+        return minElIndexinSandR(arr, low, mid);
+    }
+
+}
+
+let min = minElIndexinSandR(arr);
+console.log(min);  //this is O(logn) T.c 
+
+
+
+
+//we have to check weater the both part is sorted or not  
+//=>we'll say yes if it is ...
+//we'll say no if isn't it ...
+
+
+
+
+
+
+
+
+
