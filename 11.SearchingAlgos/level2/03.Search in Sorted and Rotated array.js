@@ -28,11 +28,11 @@ function keyIndexInSandR(arr, key, minElIndex) {
     // 0- >min- >n-1 
     // 0-> min
     // min+1 -> n-1
-    if (key >= arr[minElIndex] && key <= arr[arr.length - 1]) {
-        binarySearch(arr, key, minElIndex, arr.length - 1);
+    if (key > arr[minElIndex] && key < arr[arr.length - 1]) {
+        return binarySearch(arr, key, minElIndex, arr.length - 1);
     }
     else {
-        binarySearch(arr, key, 0, minElIndex + 1);
+        return binarySearch(arr, key, 0, minElIndex + 1);
     }
 }
 
@@ -42,11 +42,14 @@ function binarySearch(arr, key, low, high) {
 
     let mid = Math.floor(low + (high - low) / 2);
 
-    if (arr[mid] === key) return mid;
+    if (arr[mid] == key) return mid;
 
-
-
-
+    else if (key > arr[mid]) {
+        return binarySearch(arr, key, low, mid - 1)
+    }
+    else {
+        return binarySearch(arr, key, mid + 1, high)
+    }
 
 }
 
@@ -54,7 +57,7 @@ function binarySearch(arr, key, low, high) {
 
 
 let minElIndex = minel(arr);
-console.log(keyIndexInSandR(arr, 1, minElIndex))
+console.log(keyIndexInSandR(arr, 5, minElIndex))
 
 
 
