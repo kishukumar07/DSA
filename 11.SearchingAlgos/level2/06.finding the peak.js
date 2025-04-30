@@ -5,3 +5,11 @@ let arr = [7, 11, 9, 4, 3, 1, 10, 2, 4]
 
 // the logic  "leftNeighbours < peakItem  > RightNeighbour" with binary search 
 
+function bs(arr, low, high, result = -1) {
+
+    if (low > high) return result;
+
+    let mid = (low + (high - low) / 2);
+
+
+}
