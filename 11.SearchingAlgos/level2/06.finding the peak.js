@@ -12,4 +12,19 @@ function bs(arr, low, high, result = -1) {
     let mid = (low + (high - low) / 2);
 
 
+    if (arr[mid - 1] < arr[mid] > arr[mid + 1]) {
+        return mid;
+    }
+    else if (arr[mid - 1] > arr[mid]) {
+        //left part has that peak el ...
+        return bs(arr, low, mid - 1, result);
+    }
+    else {
+        return bs(arr, mid + 1, high, result);
+    }
+
 }
+
+
+
+console.log(bs([5, 6, 7, 8, 1, 2, 3, 4]))
