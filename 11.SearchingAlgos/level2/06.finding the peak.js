@@ -1,18 +1,17 @@
 // Description: find the peak in Sorted and Rotated array. 
 //similar to :-  you remember the mimimun is S&R wala part ie Que ... we first trying to find the sorted wala part and there will be that min el present.
-let arr = [7, 11, 9, 4, 3, 1, 10, 2, 4]
+let arr = [7, 8, 9, 10, 1, 2, 3, 4, 5, 6]
 
 
 // the logic  "leftNeighbours < peakItem  > RightNeighbour" with binary search 
 
-function bs(arr, low, high, result = -1) {
+function bs(arr, low = 0, high = arr.length - 1, result = -1) {
 
     if (low > high) return result;
 
-    let mid = (low + (high - low) / 2);
+    let mid = Math.floor(low + (high - low) / 2);
 
-
-    if (arr[mid - 1] < arr[mid] > arr[mid + 1]) {
+    if ((arr[mid - 1] < arr[mid]) && (arr[mid] > arr[mid + 1])) {
         return mid;
     }
     else if (arr[mid - 1] > arr[mid]) {
@@ -27,4 +26,4 @@ function bs(arr, low, high, result = -1) {
 
 
 
-console.log(bs([5, 6, 7, 8, 1, 2, 3, 4]))
+console.log(bs(arr))
