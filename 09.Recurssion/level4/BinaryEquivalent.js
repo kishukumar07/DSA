@@ -2,7 +2,7 @@ function runProgram(input) {
     // Write code here
     /*goal : -> we are given a decimal number 
         have to give binary number ...
-        constraints => 1<=n<=10^5
+        constraints => 1<=n<=10^5   ==> n! to nlogn ke beech solve krna hoga ...
   Tc =>  t* O(N)
    */
 
