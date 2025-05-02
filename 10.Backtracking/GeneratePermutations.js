@@ -64,6 +64,9 @@ function generatePermutations(arr, n, index, result) {
     swap(arr, i, index); // Backtrack
   }
 }
+
+
+
 function testCases() {
   console.log("🔹 Test Case 1:");
   runProgram(`3\n1 2 3`);
