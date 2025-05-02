@@ -22,10 +22,15 @@ function possiblesequence(str, n, i, substr, result) {
         if (substr) {
             result.push(substr);
         }
-        return;
+        return ;
     }
 
     possiblesequence(str, n, i + 1, substr + str[i], result); //take 
     possiblesequence(str, n, i + 1, substr, result);    //dont take 
+     
 }
+
+// Run the program with the test case
+runProgram("3\nabc");
+
 
