@@ -5,10 +5,7 @@ function runProgram(input) {
     let n = +lines[0];
     let str = lines[1];
 
-
-
     let result = [];
-
     possiblesequence(str, n, 0, "", result);
     // console.log(result);
     result.sort().forEach((el) => console.log(el));
