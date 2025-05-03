@@ -29,3 +29,4 @@ coinsum(arr,n,i+1,[...sub,arr[i]],result);
 coinsum(arr,n,i+1,sub,result); 
 
 }
+ 
