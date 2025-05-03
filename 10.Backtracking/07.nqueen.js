@@ -6,27 +6,30 @@ cheshboard.push(new Array(4).fill(0))
 cheshboard.push(new Array(4).fill(0))
 // console.log(cheshboard); 
 
-nqueen(cheshboard, row = 0);
+let n=  nqueen(cheshboard, row = 0);
+console.log(n);
 
-function nqueen(cheshboard, row) {
+function nqueen(cheshboard, row,ways=0) {
 
     if (row === cheshboard.length) {
-        console.log("placement \n")
-        console.log(cheshboard) //the placement 
-        // count +1 ; //not acessable why ? and how to solve this....
-
-        return;
+        // console.log("placement \n")
+        // console.log(cheshboard) //the placement 
+       return 1 ;
     }
 
 
-
+ways=0; 
     for(let colm = 0; colm < cheshboard[0].length; colm++) {
         if (isSafe(cheshboard, row, colm)) {
             cheshboard[row][colm] = 1;
-            nqueen(cheshboard, row + 1);
+     ways += nqueen(cheshboard, row + 1,ways);
             cheshboard[row][colm] = 0;
+      
         }
     }
+
+return  ways;
+
 }
 
 
