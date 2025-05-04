@@ -12,9 +12,7 @@ function runProgram(input) {
     generatesubset(arr,0,result);
     
   //   console.log(result) ; //have to sort in proper order ...
-    
-    
-    
+
     result.sort((a, b) => {
     for (let i = 0; i < Math.min(a.length, b.length); i++) {
       if (a[i] !== b[i]) {
@@ -44,3 +42,43 @@ function runProgram(input) {
   
   
   
+
+
+  //the main part of this que  ....
+/*
+let arr = [
+  [1],
+  [1, 10],
+  [1, 2],
+  [1, 2, 10],
+  [1, 2, 3],
+  [1, 2, 3, 10],
+  [1, 2, 3, 4],
+  [1, 2, 3, 4, 10]
+];
+
+//arr.sort will not work properly here ?  .. bcs it will sort on the basis of first el of an integer only ...
+
+arr.sort((a, b) => {
+  for (let i = 0; i < Math.min(a.length, b.length); i++) {
+    if (a[i] !== b[i]) {
+      return a[i] - b[i]; // compare first different number
+    }
+  }
+  return a.length - b.length; // shorter array comes first if all elements same
+});
+
+
+
+console.log(arr);
+
+
+👉 Here, the .sort() function expects a callback (comparator) which takes two items at a time, a and b, and:
+
+If it returns a negative number, a comes before b.
+
+If it returns a positive number, a comes after b.
+
+If it returns 0, their order doesn't change.
+
+*/
