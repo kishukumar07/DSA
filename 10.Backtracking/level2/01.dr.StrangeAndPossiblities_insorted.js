@@ -98,11 +98,7 @@ If a[i] > b[i], it returns positive ➔ b comes before a.
 If all compared elements are same (example: [1, 2, 3] vs [1, 2, 3, 4]),
 then it checks:
 
-javascript
-Copy
-Edit
 return a.length - b.length;
 ➔ The shorter array comes first if they match up to the shorter length.
-
 
 */
