@@ -33,8 +33,7 @@ function runProgram(input) {
     
     }
     
-    
-    
+
     
     function subset(arr,i,result,sub,k){
        
@@ -48,7 +47,7 @@ function runProgram(input) {
        
        subset(arr,i+1,result,[...sub,arr[i]],k);
        subset(arr,i+1,result,sub,k);
-     
+       
     }
     
     
