@@ -27,3 +27,7 @@ var longestIncreasingPath = function(matrix) {
 
     return result;
 };
+
+
+
+// T.c=>O({n*m} *{ n*m});
