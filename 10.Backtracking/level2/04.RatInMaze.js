@@ -1,6 +1,4 @@
 function runProgram(input) {
-
-
     let lines = input.trim().split("\n");
     const n = Number(lines[0]);
     let mat = [];
@@ -8,12 +6,8 @@ function runProgram(input) {
         mat.push(lines[i].trim().split(" ").map(Number));
     }
 
-
-
     let paths = [];
     ratInMaze(mat, n, '', paths);
-
-
 
     if (paths.length) {
         console.log(paths.join(" "));
@@ -21,15 +15,12 @@ function runProgram(input) {
         console.log(-1);
     }
 
-
 }
 
 
 function ratInMaze(mat, n, path, paths, i = 0, j = 0) {
 
     if (i < 0 || j < 0 || i === n || j === n) return;
-
-
     if (mat[i][j] === 0) return;    //pehle check kro then logic lgao   
     //baki else condn hoga
 
