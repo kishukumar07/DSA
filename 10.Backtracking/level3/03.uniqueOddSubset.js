@@ -62,3 +62,6 @@ function isSubOdd(sub) {
     if (sum % 2 === -1 || sum % 2 === 1) return true;
     return false;
 }
+// ✅ Time Complexity = O(n × 2ⁿ)
+// ✅ Space Complexity = O(n²)
+
