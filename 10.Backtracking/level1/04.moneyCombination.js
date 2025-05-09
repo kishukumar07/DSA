@@ -8,7 +8,7 @@ function runProgram(input) {
     console.log(countCombinations(arr, x));   
 }
 
-function countCombinations(coins, amount) {
+function countCombinations(coins , amount) {
     if (amount === 0) return 1;
     if (amount < 0) return 0;
 
