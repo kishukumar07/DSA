@@ -41,7 +41,6 @@ function gen(k, sub, result) {
         gen(k, [...sub, i], result);
     }
 
-
 }
 
 
