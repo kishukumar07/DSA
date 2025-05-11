@@ -1,74 +1,44 @@
-/**
- * Recursively builds expressions by inserting +, - and *
- * @param {string} num       // the string of digits
- * @param {number} target    // the target value
- * @param {number} index     // current position in num
- * @param {string} expr      // expression built so far
- * @param {number} runningTotal // current total of expr
- * @param {number} lastTerm     // last “chunk” value (with sign) for handling *
- * @param {string[]} results // array to collect valid expressions
- */
-function dfs(num, target, index, expr, runningTotal, lastTerm, results) { // dfs(num, target, 0, "", 0, 0, results);
-  if (index === num.length) {
-    if (runningTotal === target) {
-      results.push(expr);
+function generateExp(str, target, result, i = 0, path = "", evalVal = 0, residual = 0) {
+  // Base case: if we reach the end of the string
+  if (i === str.length) {
+    // If evaluated value matches target, add the expression to the result
+    if (evalVal === target) {
+      result.push(path);
     }
     return;
   }
 
-  for (let i = index + 1; i <= num.length; i++) {
-    const snippet = num.slice(index , i);  //holding left part till i    
-    // Skip numbers with leading zeros
-    if (snippet.length > 1 && snippet[0] === '0') {
-      break;
-    }
+  let currStr = "";
+  let num = 0;
 
-    const cur = Number(snippet);  // string to number  
+  // Iterate to form numbers by choosing digits from i to j
+  for (let j = i; j < str.length; j++) {
+    // Skip numbers with leading zero
+    if (j > i && str[i] === '0') break;
 
-    if (index === 0) {
-      // First chunk: start the expression
-      dfs(num, target, i, snippet, cur, cur, results);
+    currStr += str[j]; // Form the current number string
+    num = num * 10 + Number(str[j]); // Convert it into an actual number
+
+    if (i === 0) {
+      // For the very first number, just take it (no operator before)
+      generateExp(str, target, result, j + 1, currStr, num, num);
     } else {
-      // +
-      dfs(num, target,
-          i,
-          expr + '+' + snippet,
-          runningTotal + cur,
-          cur,
-          results);
+      // Addition case
+      generateExp(str, target, result, j + 1, path + '+' + currStr, evalVal + num, num);
 
-      // -
-      dfs(num, target,
-          i,
-          expr + '-' + snippet,
-          runningTotal - cur,
-          -cur,
-          results);
+      // Subtraction case
+      generateExp(str, target, result, j + 1, path + '-' + currStr, evalVal - num, -num);
 
-      // * (undo lastTerm, then add lastTerm*cur)
-      dfs(num, target,
-          i,
-          expr + '*' + snippet,
-          runningTotal - lastTerm + lastTerm * cur,
-          lastTerm * cur,
-          results);
+      // Multiplication case
+      generateExp(
+        str,
+        target,
+        result,
+        j + 1,
+        path + '*' + currStr,
+        evalVal - residual + residual * num,
+        residual * num
+      );
     }
   }
-}
-
-/**
- * @param {string} num    // the string of digits, e.g. "1234"
- * @param {number} target // the target value, e.g. 10
- * @return {string[]}     // all expressions that evaluate to target
- */
-function addOperators(num, target) {
-  const results = [];
-  dfs(num, target, 0, "", 0, 0, results);
-  return results;
-}
-
-// --- Example usage ---
-console.log(addOperators("123", 6));   // [ '1+2+3', '1*2*3' ]
-console.log(addOperators("232", 8));   // [ '2*3+2', '2+3*2' ]
-console.log(addOperators("105", 5));   // [ '1*0+5', '10-5' ]
-console.log(addOperators("00", 0));    // [ '0+0', '0-0', '0*0' ]
+}  
