@@ -2,7 +2,6 @@
 // Otherwise, print the floor of the square root ✅
 
 
-
 function runProgram(input) {
     let lines = input.trim().split("\n");
     let t = +lines[0];
