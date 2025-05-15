@@ -1,49 +1,40 @@
-//Description: Check if weather a given array is sorted and rotated or not ?
-//App1 :- We'll find the min el index ~BS.Algo ... and then check the both L &R part if sorted or not... T.C->O(N)
+// Javascript program to check an array is sorted and
+// rotated
+function check(arr)
+{
+    // Initialize count of the number of times the sequence
+    // is out of order
+    let count = 0;
 
+    let n = arr.length; // Get the size of the array
 
-let arr = [5, 6, 7, 8, 9, 1, 2, 3, 4];
-//finding the min el index in S&R array...
-
-function minElIndexinSandR(arr, low = 0, high = arr.length - 1) {
-    if (low >= high) return low;
-
-    let mid = Math.floor(low + (high - low) / 2);
-
-    if (arr[mid] > arr[high]) {
-        //right part is sorted  here is the min el 
-        return minElIndexinSandR(arr, mid + 1, high);
+    // Iterate through the array
+    for (let i = 0; i < n; i++) {
+        // Check if the current element is greater than the
+        // next element
+        if (arr[i] > arr[(i + 1) % n]) {
+            // Increment count if the sequence is out of
+            // order
+            count++;
+        }
     }
-    else {
-        return minElIndexinSandR(arr, low, mid);
-    }
 
+    // Return true if there is at most one point where the
+    // sequence is out of order
+    return count <= 1;
 }
 
-let min = minElIndexinSandR(arr);
-console.log(min);  //this is O(logn) T.c 
+// Driver Code
+// Example of a rotated and sorted array
+const arr = [ 3, 4, 5, 1, 2 ];
 
-
-
-//we have to check weater the both part 0 ->Min-1 && Min ->n-1    is sorted or not  
-//=>we'll say yes if it is ...
-//we'll say no if isn't it ...
-function sortCheck(arr, low, high) {
-    for (let i = low; i < high; i++) {
-        if (arr[i] > arr[i + 1]) return false;
-    }
-    return true;
-
-
+// Call the check function and determine if the array is
+// rotated and sorted
+if (check(arr)) {
+    // Print YES if the array is rotated and sorted
+    console.log("YES");
 }
-
-
-if (sortCheck(arr, 0, min - 1) && sortCheck(arr, min, arr.length - 1)) { console.log("yees"); }
 else {
-    console.log("No");
+    // Print NO if the array is not rotated and sorted
+    console.log("NO");
 }
-
-
-
-
-
