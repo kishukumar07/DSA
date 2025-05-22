@@ -27,6 +27,8 @@ function mergeSort(arr) {
         //conqurer ...  
         merge(arr, low,mid ,high);
         
+    
+
     }
 
 
@@ -36,7 +38,7 @@ function mergeSort(arr) {
         let temp = new Array((high - low) + 1);
         
 
-        let ptr1 = 0;  //to mid 
+        let ptr1 = low;  //to mid 
         let ptr2 = mid + 1;   //high 
         let k = 0;
         //merging two array logic ...
@@ -60,6 +62,7 @@ function mergeSort(arr) {
             temp[k++] = arr[ptr2++];
         }
 
+        // console.log(temp)
         //modifying the orignal array (basically the given subarray in that ); 
 
         let ptr3 = 0;
