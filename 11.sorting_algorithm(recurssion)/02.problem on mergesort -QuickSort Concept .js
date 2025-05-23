@@ -31,15 +31,15 @@ summary -
 -pivot placing 
 -place element wrt pivot 
         -dividing problem in sub part and repeat - recursively 
-        Base Case:(low===high ) return;  (there is only one element left sub-array)
-*/
+        Base Case:(low===high ) return;  (there is only one element left sub-array) 
+        */
 
 // what is pivot then ...  
+//  it is a element of list which is used to be place at its suitable place and using this pivot we could arrangge the recursively sort the array 
 
 
 
-
-
+// oky if we chosse the n-1 -> the element as pivot ... in general if the arrar is sorted  this will lead to O(N**2) TC  OTHERWISE THE TC WILL BE o(N * LOGN)       THE 2ND PART OF TC FOR BS .. IN SORTED ARRAY PIVOT'S BEST INDEX IS ITSELF ... SO BS FROM LOW TO HIGH ALWAYS....
 
 
 
