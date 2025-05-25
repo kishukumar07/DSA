@@ -21,7 +21,12 @@ function lcs(str1, str2, n = str1.length, m = str2.length) {
 console.log(lcs("niket sahu","disha singh"));
 
 
+// T-Complexity => 2**min(m,n)   
+//t complexity of recursion is  =>>   number of calls--->   power ->>  depth of tree. 
 
+
+// sc=>O(1); 
+                
 
 
 
