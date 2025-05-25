@@ -47,7 +47,7 @@ function partition(arr, low, high) {
     // Traverse elements from low to high - 1
     for (let j = low; j < high; j++) {
         // If current element is less than or equal to pivot
-        if (arr[j] <= pivot) {
+        if (arr[j] <= pivot){
             i++; // Move boundary forward
             // Swap current element with the element at index i
             [arr[i], arr[j]] = [arr[j], arr[i]];
