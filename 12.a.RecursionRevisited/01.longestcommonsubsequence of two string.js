@@ -11,7 +11,10 @@ function lcs(str1, str2, n = str1.length, m = str2.length) {
         return 1 + lcs(str1, str2, n - 1, m - 1);
     }
     else {
-        return lcs(str1, str2, n - 1, m) || lcs(str1, str2, n, m - 1);
+       return Math.max(
+            lcs(str1, str2, n - 1, m),
+            lcs(str1, str2, n, m - 1)
+        );
     }
 }
 
@@ -21,10 +24,8 @@ function lcs(str1, str2, n = str1.length, m = str2.length) {
 console.log(lcs("niket sahu","disha singh"));
 
 
-// T-Complexity => 2**min(m,n)   
-//t complexity of recursion is  =>>   number of calls -->   power -->>  depth of tree. 
-// sc=>O (min(m,n); 
-                
+// Time Complexity => O(2^(n + m))  // due to exponential branching
+// Space Complexity => O(n + m)     // maximum recursion depth
 
 
 
