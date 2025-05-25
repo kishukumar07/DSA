@@ -24,7 +24,7 @@ function lcs(str1, str2, n = str1.length, m = str2.length) {
 console.log(lcs("niket sahu","disha singh"));
 
 
-// Time Complexity => O(2^(n + m))  // due to exponential branching
+// Time Complexity => O(2^(n + m))   // due to exponential branching
 // Space Complexity => O(n + m)     // maximum recursion depth
 
 
