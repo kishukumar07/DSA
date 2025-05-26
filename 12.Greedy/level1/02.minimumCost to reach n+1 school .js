@@ -10,6 +10,7 @@ let minCost = Infinity;
 function fun(costs, i = 0, sum = 0) {
     // Base case: if we've reached the end
     if (i === costs.length) {
+       
         minCost = Math.min(minCost, sum); // update minimum cost
         return;
     }
