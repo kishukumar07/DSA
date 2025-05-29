@@ -1,42 +1,35 @@
-
 function runProgram(input) {
     // Write code here
-
     let lines = input.trim().split("\n");
     let n = +lines[0];
     let arr = lines[1].trim().split(" ").map(Number);
 
-    bs(arr);
+    rems(arr);
+    console.log(arr.join(" "));
 
-    console.log(arr);
 
 }
-
-function bs(arr, low = 0, high = arr.length - 1) {
+function rems(arr, low = 0, high = arr.length - 1) {
 
     if (low >= high) return;
-
-
     let mid = parseInt(low + (high - low) / 2);
 
-    bs(arr, low, mid);
-    bs(arr, mid + 1, high);
+    rems(arr, low, mid);
+    rems(arr, mid + 1, high);
     mergeandupdate(arr, low, high, mid);
-}
 
+}
 
 function mergeandupdate(arr, low, high, mid) {
 
     let temp = new Array(high - low + 1);
-
-
     let i = low;
     let j = mid + 1;
     let k = 0;
 
     while (i <= mid && j <= high) {
 
-        if (arr[i] < arr[j]) {
+        if (arr[i] > arr[j]) {
             temp[k++] = arr[i];
             i++;
         } else {
@@ -45,7 +38,6 @@ function mergeandupdate(arr, low, high, mid) {
         }
 
     }
-
 
     while (i <= mid) {
         temp[k++] = arr[i];
@@ -57,14 +49,15 @@ function mergeandupdate(arr, low, high, mid) {
         j++;
     }
 
+
     let p = 0;
 
-
     for (let i = low; i <= high; i++) {
-        arr[i] = temp[p];
-        p++;
+        arr[i] = temp[p++];
     }
 
 }
+
+
 
 
