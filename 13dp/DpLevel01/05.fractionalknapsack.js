@@ -21,7 +21,6 @@ class Solution {
 function fun(arr, capacity) {
   let maxVal = 0,
     i = 0;
-
   while (i < arr.length && capacity >= arr[i][2]) {
     maxVal += arr[i][1];
     capacity -= arr[i][2];
@@ -31,9 +30,9 @@ function fun(arr, capacity) {
   if (i < arr.length) {
     maxVal += capacity * arr[i][0];
   }
-
   return maxVal;
 }
+
 
 
 
