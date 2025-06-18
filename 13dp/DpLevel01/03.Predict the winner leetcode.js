@@ -3,6 +3,9 @@
  * @param {number[]} nums
  * @return {boolean}
  */
+
+//TOP -DOWN DP (MEMOIZATION ) ...
+
 var predictTheWinner = function (nums) {
   let n = nums.length;
   let dp = new Array(n + 1);
@@ -32,3 +35,5 @@ function fun(arr, dp, s, e) {
 
 // Tc=N*M
 // sc=N*m
+
+//BOTTOM UP -DP  -> ITERATIVE DP ...
